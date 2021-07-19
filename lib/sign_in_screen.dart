@@ -1,6 +1,6 @@
+import 'package:email_validator/email_validator.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:nearby/firebase.dart';
 
 class SignInScreen extends StatelessWidget {
   final _formKey = GlobalKey<FormState>();
@@ -22,9 +22,10 @@ class SignInScreen extends StatelessWidget {
                     controller: _emailTextEditingController,
                     decoration: const InputDecoration(hintText: 'Email'),
                     validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return 'Field can not be empty';
+                      if (value == null || value.isEmpty || !EmailValidator.validate(value)) {
+                        return 'Incorrect address email';
                       }
+
                       return null;
                     },
                   ),
@@ -40,10 +41,19 @@ class SignInScreen extends StatelessWidget {
                     },
                   ),
                   MaterialButton(
-                    onPressed: () {
+                    onPressed: () async {
                       if (_formKey.currentState!.validate()) {
-                        Future<UserCredential> uc = Authentication.signIn(_emailTextEditingController.text, _passwordTextEditingController.text);
-                        uc.whenComplete(() => Navigator.popAndPushNamed(context, '/home'));
+                        try {
+                          await FirebaseAuth.instance
+                              .signInWithEmailAndPassword(email: _emailTextEditingController.text, password: _passwordTextEditingController.text);
+                          Navigator.popAndPushNamed(context, '/home');
+                        } on FirebaseAuthException catch (e) {
+                          if (e.code == 'user-not-found') {
+                            ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('No user found for that email')));
+                          } else if (e.code == 'wrong-password') {
+                            ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Wrong password provided for that user')));
+                          }
+                        }
                       }
                     },
                     child: const Text('Sign in'),
