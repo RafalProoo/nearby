@@ -25,9 +25,7 @@ class _AppState extends State<App> {
       future: _initialization,
       builder: (context, snapshot) {
         return NeumorphicApp(
-          theme: const NeumorphicThemeData(
-              boxShape: NeumorphicBoxShape.stadium()
-          ),
+          theme: const NeumorphicThemeData(baseColor: Color(0xFFedebec), boxShape: NeumorphicBoxShape.stadium()),
           home: getScreen(snapshot),
           routes: {'/signIn': (context) => SignInScreen(), '/signUp': (context) => SignUpScreen(), '/home': (context) => const HomeScreen()},
         );
