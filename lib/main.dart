@@ -1,10 +1,10 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_neumorphic_null_safety/flutter_neumorphic.dart';
-import 'package:nearby/create_post_screen.dart';
+import 'package:nearby/posts/create_post_screen.dart';
 import 'package:nearby/home_screen.dart';
-import 'package:nearby/sign_in_screen.dart';
-import 'package:nearby/sign_up_screen.dart';
+import 'package:nearby/access/sign_in_screen.dart';
+import 'package:nearby/access/sign_up_screen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();

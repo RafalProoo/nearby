@@ -1,9 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dart_geohash/dart_geohash.dart';
 import 'package:flutter_neumorphic_null_safety/flutter_neumorphic.dart';
-import 'package:nearby/post.dart';
+import 'package:nearby/posts/post.dart';
 
-import 'location_methods.dart';
+import '../location_methods.dart';
 
 class PostsView extends StatefulWidget {
   const PostsView({Key? key}) : super(key: key);

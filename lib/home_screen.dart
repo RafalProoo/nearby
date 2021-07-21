@@ -1,8 +1,8 @@
 import 'package:flutter_neumorphic_null_safety/flutter_neumorphic.dart';
-import 'package:nearby/people_view.dart';
-import 'package:nearby/posts_view.dart';
+import 'package:nearby/people/people_view.dart';
+import 'package:nearby/posts/posts_view.dart';
 
-import 'account_view.dart';
+import 'access/account_view.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
