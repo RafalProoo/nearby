@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic_null_safety/flutter_neumorphic.dart';
+import 'package:nearby/create_post_screen.dart';
 import 'package:nearby/home_screen.dart';
 import 'package:nearby/sign_in_screen.dart';
 import 'package:nearby/sign_up_screen.dart';
@@ -25,9 +25,10 @@ class _AppState extends State<App> {
       future: _initialization,
       builder: (context, snapshot) {
         return NeumorphicApp(
-          theme: const NeumorphicThemeData(baseColor: Color(0xFFedebec), boxShape: NeumorphicBoxShape.stadium()),
+          title: 'Nearby',
+          theme: const NeumorphicThemeData(baseColor: Color(0xFFedebec), variantColor: Color(0xff1b58ca), accentColor: Color(0xff1b58ca), boxShape: NeumorphicBoxShape.stadium()),
           home: getScreen(snapshot),
-          routes: {'/signIn': (context) => SignInScreen(), '/signUp': (context) => SignUpScreen(), '/home': (context) => const HomeScreen()},
+          routes: {'/signIn': (context) => SignInScreen(), '/signUp': (context) => SignUpScreen(), '/home': (context) => const HomeScreen(), '/createPost': (context) => const CreatePostScreen()},
         );
       },
     );
