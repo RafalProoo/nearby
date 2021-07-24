@@ -48,7 +48,7 @@ class _PostsViewState extends State<PostsView> {
               return Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Neumorphic(
-                    style: NeumorphicStyle(boxShape: NeumorphicBoxShape.roundRect(BorderRadius.circular(20))),
+                    style: NeumorphicStyle(boxShape: NeumorphicBoxShape.roundRect(BorderRadius.circular(16.0))),
                     child: Column(
                       children: [
                         if (_posts[index - 1].image != null)

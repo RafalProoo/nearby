@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class Post {
-  int _uid;
+  String _uid;
   String _text;
   Timestamp _timestamp;
   String? _image;
@@ -10,9 +10,9 @@ class Post {
   Post(this._uid, this._text, this._timestamp, this._image, this._location);
 
 
-  int get uid => _uid;
+  String get uid => _uid;
 
-  set uid(int value) {
+  set uid(String value) {
     _uid = value;
   }
 
@@ -43,5 +43,9 @@ class Post {
 
   set location(String value) {
     _location = value;
+  }
+
+  Map<String, dynamic> toMap() {
+    return {'uid': _uid, 'text': text, 'timestamp': timestamp, 'image': _image, 'location': location};
   }
 }
