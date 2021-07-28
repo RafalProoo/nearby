@@ -86,8 +86,10 @@ class _PostsViewState extends State<PostsView> {
 
     if (geoHash != null) {
       Map<String, String> neighbors = geoHasher.neighbors(geoHash);
+
       CollectionReference posts = FirebaseFirestore.instance.collection('posts');
       QuerySnapshot querySnapshot = await posts.where('location', whereIn: neighbors.values.toList()).get();
+
       List<Post> list = querySnapshot.docs
           .map(((document) => Post(
                 document['uid'],
