@@ -18,13 +18,18 @@ All posts and users are prescribed to specified square on the map. Users can onl
 
 ## Screens from app
 ### Login and registration
-- ![Login](https://github.com/RafalProoo/nearby/blob/master/screens/login.jpg)
-- ![Registration](https://github.com/RafalProoo/nearby/blob/master/screens/registration.jpg)
+
+![Login](https://github.com/RafalProoo/nearby/blob/master/screens/login.png)
+![Registration](https://github.com/RafalProoo/nearby/blob/master/screens/registration.png)
 ### Posts
-- ![Posts](https://github.com/RafalProoo/nearby/blob/master/screens/posts.jpg)
+
+![Posts](https://github.com/RafalProoo/nearby/blob/master/screens/posts.png)
 ### Post creation
-- ![Post creation](https://github.com/RafalProoo/nearby/blob/master/screens/post_creation.jpg)
+
+![Post creation](https://github.com/RafalProoo/nearby/blob/master/screens/post_creation.png)
 ### Nearest neighbors
-- ![Nearest neighbors](https://github.com/RafalProoo/nearby/blob/master/screens/people.jpg)
+
+![Nearest neighbors](https://github.com/RafalProoo/nearby/blob/master/screens/people.png)
 ### Account
-- ![Account](https://github.com/RafalProoo/nearby/blob/master/screens/account.jpg)
+
+![Account](https://github.com/RafalProoo/nearby/blob/master/screens/account.png)
