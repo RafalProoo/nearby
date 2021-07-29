@@ -1,16 +1,28 @@
-# nearby
+# Nearby
+## Social platform for neighbors.
 
-Social platform for neighbors.
+The application allows users occupying the closest area on the map to add and view common content.
 
-## Getting Started
+## Used technologies
+### Geohashing
+All posts and users are prescribed to specified square on the map. Users can only display content of the nearest neighbors.
 
-This project is a starting point for a Flutter application.
+- [GeohashExplorer](http://geohash.gofreerange.com/)
+- ![User and his neighbors]()
 
-A few resources to get you started if this is your first Flutter project:
+### Firebase
+[Firebase](https://firebase.google.com/) was used to keep posts and information about users, their accounts and locations.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+### Neumorphism
+[Neumorphism](https://opengeekslab.medium.com/neumorphism-the-next-big-thing-in-ui-design-11e703df3ab0) was used as a main visual style of this application.
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Screens from app
+### Login and registration
+
+### Posts
+
+### Post creation
+
+### Nearest neighbors
+
+### Account
