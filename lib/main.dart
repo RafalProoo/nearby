@@ -36,7 +36,13 @@ class _AppState extends State<App> {
 
   getScreen(AsyncSnapshot snapshot) {
     if (snapshot.hasError) {
-      return const Text('Something went wrong');
+      return const Scaffold(
+        body: Center(
+          child: Text(
+            'Something went wrong',
+          ),
+        ),
+      );
     } else if (snapshot.connectionState == ConnectionState.done) {
       if (FirebaseAuth.instance.currentUser == null) {
         return SignInScreen();
@@ -44,7 +50,13 @@ class _AppState extends State<App> {
         return const HomeScreen();
       }
     } else {
-      return const Text('Loading');
+      return const Scaffold(
+        body: Center(
+          child: Text(
+            'Loading',
+          ),
+        ),
+      );
     }
   }
 }
